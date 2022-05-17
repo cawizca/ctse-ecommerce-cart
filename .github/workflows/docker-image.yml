@@ -27,7 +27,7 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/ctse-ecommerce-cart-function:${{ github.sha }}
       - name: Update config files in k8s
-        run: sed -i.bak 's/{{tag}}/${{ github.sha }}/g' config/k8s/deploy.yml  && rm k8s/*.bak
+        run: sed -i.bak 's/{{tag}}/${{ github.sha }}/g' config/k8s/deploy.yml  && rm config/k8s/*.bak
       - uses: actions-hub/kubectl@master
         env:
           KUBE_CONFIG: ${{secrets.KUBE_CONFIG}}
