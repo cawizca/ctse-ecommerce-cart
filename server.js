@@ -25,5 +25,5 @@ const CartItems = require("./routes/cart.route");
 app.use("/cart", CartItems);
 
 app.listen(PORT, () => {
-  logger.info(`Server is up and runon port ${PORT}.`);
+  logger.info(`Server is up and running on port ${PORT}.`);
 });
