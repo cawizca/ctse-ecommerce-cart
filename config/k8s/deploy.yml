@@ -25,7 +25,7 @@ spec:
         app: cart-function
     spec:
       containers:
-        - image: cawizca/ctse-ecommerce-cart-function:ce12923eed0827b1bd532ef2d1abc5d89787c0a1
+        - image: cawizca/ctse-ecommerce-cart-function:{{tag}}
           imagePullPolicy: Always
           name: ctse-ecommerce-cart-function
           resources: {}
